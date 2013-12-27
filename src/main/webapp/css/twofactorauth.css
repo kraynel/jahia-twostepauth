@@ -1,0 +1,23 @@
+.twoFactorAuth p{
+	padding: 5px;
+}
+
+.twoFactorAuth input,
+.twoFactorAuth.step2 img,
+.twoFactorAuth.step2 #hiddenToken
+{
+	display: block;
+    margin: 0 auto;
+}
+
+.twoFactorAuth.step2 .inline-editable {
+	border-bottom: 1px dotted #0099FF;
+    color: #0099FF;
+    padding-bottom: 1px;
+	
+}
+
+.twoFactorAuth.step3 input {
+	width: 185px;
+	margin: 5px 0;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<bean id="LoginEngineAuthValve" class="org.jahia.params.valves.LoginEngineAuthValveImpl">
+    	<property name="cookieAuthConfig" ref="cookieAuthConfig"/>
+        <property name="fireLoginEvent" value="${fireLoginEvent:false}"/>
+        <property name="preserveSessionAttributes" value="${preserveSessionAttributesOnLogin:}" />
+    </bean>
+	
+    <bean id="authPipeline" class="org.jahia.pipelines.impl.GenericPipeline" init-method="initialize">
+        <property name="name" value="authPipeline" />
+        <property name="valves">
+            <list>
+                <bean id="HttpBasicAuthValve" class="org.jahia.params.valves.HttpBasicAuthValveImpl" />
+                <bean id="TokenAuthValve" class="org.jahia.params.valves.TokenAuthValveImpl" />
+                <bean id="TwoFactorLoginEngineAuthValve" class="org.jahia.params.valves.custom.LoginTwoFactorWrapperImpl">
+			        <property name="wrappedValve" ref="LoginEngineAuthValve" />
+			        <property name="cookieAuthConfig" ref="cookieAuthConfig"/>
+			    </bean>
+                <bean id="SessionAuthValve" class="org.jahia.params.valves.SessionAuthValveImpl" />
+                <bean id="CookieAuthValve" class="org.jahia.params.valves.CookieAuthValveImpl">
+                	<property name="cookieAuthConfig" ref="cookieAuthConfig"/>
+                </bean>
+                <bean id="ContainerAuthValve" class="org.jahia.params.valves.ContainerAuthValveImpl">
+                    <property name="enabled" value="${auth.container.enabled}"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

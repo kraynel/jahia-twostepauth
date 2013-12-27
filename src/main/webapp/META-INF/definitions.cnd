@@ -1,0 +1,10 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:enableTwoFactorAuth] > jnt:content
+- enableTwoFactorAuth (boolean) = false
+- secretTotp (string)
+- emergencyCode (string)
+
+[jnt:configureTwoFactorAuth] > jnt:content, jmix:userProfileComponents, jmix:studioOnly
+- providerName (string) = 'Jahia' 
