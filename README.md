@@ -5,7 +5,7 @@ First warning
 This module is experimental. It modifies the defaults Jahia authentication process and should not be used if you do not fully understand the concepts behind two factor authentication.  
  
  
-It works well with any mobile authenticator application based on the [RFC 6238](https://tools.ietf.org/html/rfc6238) :  
+It works well with any mobile authenticator application based on the [RFC 6238](https://tools.ietf.org/html/rfc6238):  
  
 - for [iOS](https://itunes.apple.com/fr/app/google-authenticator/id388497605) and [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) you can use the Google Authenticator app.  
  
@@ -25,10 +25,10 @@ The installation process is in several steps.
  
 - First, you install the module itself. Just drop the war into your shared_modules directory. It registers an authentication wrapper class, which adds the second authentication factor to any existing authentication valve. The default wrapped valve is the JCR Authentication Valve.
  
-- You then have to install the updated 401 error page. You can download the latest one [here](#).
+- You then have to install the updated 401 error page. You can download the latest one [here](https://github.com/kraynel/jahia-twostepauth/blob/master/tools/error_401.jsp).
  
 - You can now add the provided enrollement module to the system site (and configure your [issuer prefix](http://code.google.com/p/google-authenticator/wiki/KeyUriFormat#Label)).
-    - by running [the provided groovy script](#) in the [groovy console](http://localhost:8080/tools/groovyConsole.jsp), which add all the dependencies between your system site and the module
+    - by running [the provided groovy script](https://github.com/kraynel/jahia-twostepauth/blob/master/tools/import.groovy) in the [groovy console](http://localhost:8080/tools/groovyConsole.jsp), which add all the dependencies between your system site and the module
 	- or by going into studio mode and manually adding the ```jnt:configureTwoFactorAuth``` component into the system site (I add it below the other personnal settings in the base/user-base/user-edit-details page, but it is totally up to you.
 	
 - Finally, modify your login module to support two factor auth. The module provides a specific view for the login module used in the space acme template, if you want to test it.
