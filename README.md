@@ -1,3 +1,5 @@
+![Jahia Two-Factor Auth](https://raw.github.com/kraynel/jahia-twostepauth/master/src/main/import/content/templateSets/totp/templates/files/template.jpg/template.jpg "Jahia Two-Factor Auth")
+
 First warning  
 ===========  
  
