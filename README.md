@@ -4,7 +4,7 @@ First warning
 ===========  
  
  
-This module is experimental. It modifies the defaults Jahia authentication process and should not be used if you do not fully understand the concepts behind two factor authentication.  
+This module is experimental. It modifies the defaults Jahia authentication process and should not be used if you do not fully understand the concepts behind two factor authentication. All rights related to logos and visuals are reserved to [Marie Jamon](http://mariejamon.com).
  
  
 It works well with any mobile authenticator application based on the [RFC 6238](https://tools.ietf.org/html/rfc6238):  
