@@ -8,7 +8,7 @@
       <templates j:originWS="default" j:rootTemplatePath="/base" jcr:primaryType="jnt:templatesFolder">
         <files j:originWS="default" jcr:primaryType="jnt:folder">
           <template.jpg j:originWS="default" jcr:mixinTypes="jmix:image" jcr:primaryType="jnt:file">
-            <jcr:content jcr:mimeType="image/jpeg" jcr:primaryType="jnt:resource" />
+            <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource" />
           </template.jpg>
           <logo.png j:originWS="default" jcr:mixinTypes="jmix:image" jcr:primaryType="jnt:file">
             <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource" />
