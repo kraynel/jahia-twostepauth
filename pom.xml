@@ -37,7 +37,7 @@
     
     If you are unsure which license is appropriate for your use, 
     please contact the sales department at sales@jahia.com.
---><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
+--><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>jahia-modules</artifactId>
@@ -47,7 +47,7 @@
     <groupId>org.jahia.modules</groupId>
     <artifactId>totp</artifactId>
     <name>TOTP</name>
-    <version>1.0-SNAPSHOT</version>    
+    <version>1.0</version>    
     <packaging>war</packaging>
     <description>This is the custom module (TOTP) for running on a Jahia server.</description>
     
@@ -113,12 +113,12 @@
                         <manifestEntries>
 		                	<Implementation-Title>${project.name}</Implementation-Title>
 		                    <Implementation-Version>${project.version}</Implementation-Version>
-		                    <Implementation-Vendor></Implementation-Vendor>
-		                    <Implementation-Vendor-Id></Implementation-Vendor-Id>
-		                    <Implementation-URL></Implementation-URL>
+		                    <Implementation-Vendor />
+		                    <Implementation-Vendor-Id />
+		                    <Implementation-URL />
 		                    <Specification-Title>${project.name}</Specification-Title>
 		                    <Specification-Version>${project.version}</Specification-Version>
-		                    <Specification-Vendor></Specification-Vendor>
+		                    <Specification-Vendor />
                             <package-name>${project.name}</package-name>
                             <depends>Default Jahia Templates</depends>
                             <root-folder>${artifactId}</root-folder>
