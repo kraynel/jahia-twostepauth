@@ -47,7 +47,7 @@
     <groupId>org.jahia.modules</groupId>
     <artifactId>totp</artifactId>
     <name>TOTP</name>
-    <version>1.0</version>    
+    <version>1.1-SNAPSHOT</version>    
     <packaging>war</packaging>
     <description>This is the custom module (TOTP) for running on a Jahia server.</description>
     
